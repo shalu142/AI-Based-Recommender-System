@@ -1,0 +1,76 @@
+version: '3.8'
+
+services:
+  # PostgreSQL Database
+  postgres:
+    image: postgres:15-alpine
+    container_name: recommendflix-db
+    environment:
+      POSTGRES_DB: recommendations
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: password
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+    networks:
+      - recommendflix-network
+
+  # Spring Boot Backend
+  backend:
+    build:
+      context: ../backend
+      dockerfile: ../docker/Dockerfile.backend
+    container_name: recommendflix-backend
+    environment:
+      SPRING_PROFILES_ACTIVE: prod
+      DB_HOST: postgres
+      DB_PORT: 5432
+      DB_NAME: recommendations
+      DB_USER: admin
+      DB_PASS: password
+      JWT_SECRET: mySecretKey123456789012345678901234567890
+      TMDB_API_KEY: ${TMDB_API_KEY}
+    ports:
+      - "8080:8080"
+    depends_on:
+      - postgres
+    networks:
+      - recommendflix-network
+    volumes:
+      - ../data:/app/data
+    restart: unless-stopped
+
+  # React Frontend
+  frontend:
+    build:
+      context: ../frontend
+      dockerfile: ../docker/Dockerfile.frontend
+    container_name: recommendflix-frontend
+    environment:
+      VITE_API_URL: http://localhost:8080/api
+    ports:
+      - "3000:80"
+    depends_on:
+      - backend
+    networks:
+      - recommendflix-network
+    restart: unless-stopped
+
+  # Redis (Optional - for caching)
+  redis:
+    image: redis:7-alpine
+    container_name: recommendflix-redis
+    ports:
+      - "6379:6379"
+    networks:
+      - recommendflix-network
+    restart: unless-stopped
+
+volumes:
+  postgres_data:
+
+networks:
+  recommendflix-network:
+    driver: bridge
