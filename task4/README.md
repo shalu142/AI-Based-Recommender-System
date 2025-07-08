@@ -195,11 +195,9 @@ docker-compose -f docker-compose.prod.yml up -d
 4. Push to branch (`git push origin feature/amazing-feature`)
 5. Open Pull Request
 
-## 📄 License
-This project is licensed under the MIT License.
 
-## 🆘 Support
-For issues and questions:
-- Create GitHub issue
-- Check documentation
-- Review API endpoints in Swagger UI: http://localhost:8080/swagger-ui.html
+Author 
+
+Shalu Baloda Java Programming intern @ Codetech IT Solution PVT. LTD.
+
+Live Demo: 
