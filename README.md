@@ -61,8 +61,6 @@ task4/
 
 ├── postman_collection.json
 
-└── README.md
-
 
 
 ## 🌟 Features
@@ -120,4 +118,4 @@ Shalu Baloda
 Java Programmer Intern
 Codetech Solution Pvt. Ltd.
 
-🌐 Live Project Preview: Click here to open the app
+🌐 Live Project Preview:https://bolt.new/~/sb1-pamdxkt5
