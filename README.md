@@ -50,11 +50,17 @@ This intelligent system utilizes **item-based collaborative filtering** to analy
 ## 📁 Folder Structure
 
 task4/
+
 ├── backend/ ← Spring Boot + Mahout
+
 ├── frontend/ ← React + TypeScript + Tailwind
+
 ├── data/ ← Sample datasets (ratings.csv, movies.csv)
+
 ├── docker/ ← Dockerfiles and docker-compose.yml
+
 ├── postman_collection.json
+
 └── README.md
 
 
@@ -91,15 +97,7 @@ task4/
 
 ---
 
-## 📦 Dataset Example
 
-```csv
-userId,itemId,rating
-1,101,5
-1,102,3
-2,101,4
-...
-You can upload datasets via the Admin Panel or directly to the backend using the /upload-data API.
 
 🧪 Running Locally
 Backend (Spring Boot)
