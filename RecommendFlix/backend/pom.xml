@@ -1,0 +1,6 @@
+@@ .. @@
+-    <groupId>com.task4</groupId>
++    <groupId>com.recommendflix</groupId>
+     <artifactId>recommendation-engine</artifactId>
+     <version>1.0.0</version>
+     <name>Netflix-Style Recommendation Engine</name>

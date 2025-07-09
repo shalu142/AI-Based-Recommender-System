@@ -1,4 +1,4 @@
-# AI-Based Recommender System
+# RecommendFlix - AI-Based Recommender System
 
 COMPANY: CODTECH IT SOLUTIONS PVT. LTD.
 
@@ -21,7 +21,7 @@ MENTOR: NEELS SANTHOSH KUMAR
 DESCRITON:# 🎬 Netflix-Style AI-Based Recommendation System
 
 
-Welcome to task4 – a full-stack, production-grade AI-powered recommendation system that replicates the recommendation behavior of platforms like Netflix. This project combines Apache Mahout, Spring Boot, and a modern React + TypeScript frontend to deliver personalized movie/show suggestions based on user behavior.
+Welcome to RecommendFlix – a full-stack, production-grade AI-powered recommendation system that replicates the recommendation behavior of platforms like Netflix. This project combines Apache Mahout, Spring Boot, and a modern React + TypeScript frontend to deliver personalized movie/show suggestions based on user behavior.
 
 🚀 Project Overview
 
@@ -50,7 +50,7 @@ TMDB API Integration
 
 📁 Folder Structure
 
-task4/
+RecommendFlix/
 
 ├── backend/ ← Spring Boot + Mahout
 
@@ -132,13 +132,13 @@ Endpoint	Description
 🧪 Running Locally Backend (Spring Boot)
 
 
-cd task4/backend ./mvnw spring-boot:run Frontend (React + Vite)
+cd RecommendFlix/backend ./mvnw spring-boot:run Frontend (React + Vite)
 
 
-cd task4/frontend npm install npm run dev Docker (Full Stack)
+cd RecommendFlix/frontend npm install npm run dev Docker (Full Stack)
 
 
-cd task4/docker docker-compose up --build
+cd RecommendFlix/docker docker-compose up --build
 
 
 🧑‍💻 Author Shalu Baloda Java Programmer Intern Codetech Solution Pvt. Ltd.

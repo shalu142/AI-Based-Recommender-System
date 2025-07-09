@@ -1,0 +1,13 @@
+@@ .. @@
+ # Logging
+ logging:
+   level:
+-    com.task4: DEBUG
++    com.recommendflix: DEBUG
+     org.springframework.security: DEBUG
+@@ .. @@
+ logging:
+   level:
+-    com.task4: INFO
++    com.recommendflix: INFO
+     org.springframework.security: WARN
