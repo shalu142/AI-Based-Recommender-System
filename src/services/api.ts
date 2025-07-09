@@ -3,7 +3,7 @@ import { mockUser, mockMovies, mockRecommendations } from '../data/mockData';
 
 // Mock API service - replace with actual API calls to your Spring Boot backend
 class ApiService {
-  private baseUrl = 'http://localhost:8080/api'; // Your Spring Boot backend URL
+  private baseUrl = import.meta.env.VITE_API_URL || 'http://localhost:8080/api';
 
   // Simulate API delay
   private delay = (ms: number) => new Promise(resolve => setTimeout(resolve, ms));
