@@ -1,5 +1,18 @@
 # RecommendFlix - AI-Based Recommender System
 
+## 🌐 Live Demo
+
+**🚀 [View Live Demo](https://recommendflix-demo.vercel.app)**
+
+> Experience the full-featured Netflix-style recommendation system with personalized AI suggestions, interactive movie browsing, and real-time rating capabilities.
+
+### Demo Credentials
+- **Username:** `demo_user`
+- **Password:** `demo123`
+- **Admin Access:** `admin` / `admin123`
+
+---
+
 COMPANY: CODTECH IT SOLUTIONS PVT. LTD.
 
 
