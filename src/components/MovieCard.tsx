@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Star, Play, Plus, ThumbsUp, ThumbsDown } from 'lucide-react';
 import { Movie } from '../types';
+import { VideoPlayer } from './VideoPlayer';
 
 interface MovieCardProps {
   movie: Movie;
@@ -11,18 +12,23 @@ interface MovieCardProps {
 export const MovieCard: React.FC<MovieCardProps> = ({ movie, onRate, showSimilarityScore = false }) => {
   const [isHovered, setIsHovered] = useState(false);
   const [userRating, setUserRating] = useState(movie.userRating || 0);
+  const [isPlayerOpen, setIsPlayerOpen] = useState(false);
 
   const handleRating = (rating: number) => {
     setUserRating(rating);
     onRate(movie.id, rating);
   };
 
+  const handlePlayTrailer = () => {
+    setIsPlayerOpen(true);
+  };
   return (
-    <div
-      className="relative bg-gray-800 rounded-lg overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl"
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
-    >
+    <>
+      <div
+        className="relative bg-gray-800 rounded-lg overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl"
+        onMouseEnter={() => setIsHovered(true)}
+        onMouseLeave={() => setIsHovered(false)}
+      >
       <div className="aspect-[2/3] relative">
         <img
           src={movie.posterUrl}
@@ -38,9 +44,12 @@ export const MovieCard: React.FC<MovieCardProps> = ({ movie, onRate, showSimilar
         
         <div className={`absolute inset-0 bg-black bg-opacity-75 flex items-center justify-center transition-opacity duration-300 ${isHovered ? 'opacity-100' : 'opacity-0'}`}>
           <div className="text-center space-y-4">
-            <button className="bg-white text-black px-6 py-2 rounded-full font-medium hover:bg-gray-200 transition-colors flex items-center space-x-2">
+            <button 
+              onClick={handlePlayTrailer}
+              className="bg-white text-black px-6 py-2 rounded-full font-medium hover:bg-gray-200 transition-colors flex items-center space-x-2"
+            >
               <Play className="w-4 h-4" />
-              <span>Play</span>
+              <span>Play Trailer</span>
             </button>
             
             <div className="flex items-center justify-center space-x-2">
@@ -83,6 +92,15 @@ export const MovieCard: React.FC<MovieCardProps> = ({ movie, onRate, showSimilar
         
         <p className="text-gray-400 text-xs line-clamp-3">{movie.description}</p>
       </div>
-    </div>
+      </div>
+
+      {/* Video Player */}
+      <VideoPlayer
+        isOpen={isPlayerOpen}
+        onClose={() => setIsPlayerOpen(false)}
+        movieTitle={movie.title}
+        trailerUrl={movie.trailerUrl}
+      />
+    </>
   );
 };
