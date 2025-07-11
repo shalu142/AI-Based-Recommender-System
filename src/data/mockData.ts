@@ -19,6 +19,7 @@ export const mockMovies: Movie[] = [
     description: 'When a young boy disappears, his mother, a police chief and his friends must confront terrifying supernatural forces.',
     userRating: 5,
     trailerUrl: 'https://www.youtube.com/watch?v=mnd7sFt5c3A'
+  }
   {
     id: 2,
     title: 'Breaking Bad',
@@ -29,6 +30,7 @@ export const mockMovies: Movie[] = [
     description: 'A high school chemistry teacher diagnosed with inoperable lung cancer turns to manufacturing meth.',
     userRating: 4,
     trailerUrl: 'https://www.youtube.com/watch?v=ceqOTZnhgp8'
+  }
   {
     id: 3,
     title: 'Dark',
@@ -39,6 +41,7 @@ export const mockMovies: Movie[] = [
     description: 'A family saga with a supernatural twist, set in a German town where the disappearance of two young children exposes double lives.',
     userRating: 5,
     trailerUrl: 'https://www.youtube.com/watch?v=ESEUoa-mz2c'
+  }
   {
     id: 4,
     title: 'Mindhunter',
@@ -49,6 +52,7 @@ export const mockMovies: Movie[] = [
     description: 'Set in the late 1970s, two FBI agents are tasked with interviewing serial killers to solve open cases.',
     similarityScore: 0.87,
     trailerUrl: 'https://www.youtube.com/watch?v=oQ2cBbN6YWs'
+  }
   {
     id: 5,
     title: 'The Witcher',
@@ -59,6 +63,7 @@ export const mockMovies: Movie[] = [
     description: 'Geralt of Rivia, a solitary monster hunter, struggles to find his place in a world where people often prove more wicked than beasts.',
     similarityScore: 0.82,
     trailerUrl: 'https://www.youtube.com/watch?v=eb6gLt-dqIw'
+  }
   {
     id: 6,
     title: 'Money Heist',
@@ -69,6 +74,7 @@ export const mockMovies: Movie[] = [
     description: 'An unusual group of robbers attempt to carry out the most perfect robbery in Spanish history.',
     similarityScore: 0.79,
     trailerUrl: 'https://www.youtube.com/watch?v=htqXL94Rza4'
+  }
   {
     id: 7,
     title: 'Narcos',
@@ -89,6 +95,7 @@ export const mockMovies: Movie[] = [
     similarityScore: 0.81,
     trailerUrl: 'https://www.youtube.com/watch?v=IuS5huqOND4'
     trailerUrl: 'https://www.youtube.com/watch?v=xl8zdCY-abw'
+  }
 ];
 
 export const mockRecommendations: Recommendation = {
