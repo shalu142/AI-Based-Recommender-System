@@ -1,26 +1,5 @@
 # RecommendFlix - AI-Based Recommender System
 
-## 🌐 Live Demo
-
-**🚀 [View Live Demo](https://zp1v56uxy8rdx5ypatb0ockcb9tr6a-oci3--5173--96435430.local-credentialless.webcontainer-api.io/)**
-
-> Experience the full-featured Netflix-style recommendation system with personalized AI suggestions, interactive movie browsing, and real-time rating capabilities. This is a live development preview running in WebContainer.
-
-### Demo Credentials
-- **Demo User:** `john_doe` / `password123`
-- **Features:** Browse recommendations, rate movies, search functionality
-- **Note:** This demo uses mock data for demonstration purposes
-
-### 🎯 What You Can Try:
-- ✅ Browse personalized movie recommendations
-- ✅ Rate movies with the 5-star system
-- ✅ Search for movies by title or genre
-- ✅ View similar movies for any selected title
-- ✅ Switch between different tabs (Recommendations, Profile, Similar Items, Admin)
-- ✅ Export recommendations as CSV
-- ✅ Admin panel with analytics and data upload
-
----
 
 COMPANY: CODTECH IT SOLUTIONS PVT. LTD.
 
@@ -167,3 +146,19 @@ cd RecommendFlix/docker docker-compose up --build
 
 
 🌐 Live Project Preview:https://zp1v56uxy8rdx5ypatb0ockcb9tr6a-oci3--5173--96435430.local-credentialless.webcontainer-api.io/
+
+### Demo Credentials
+- **Demo User:** `john_doe` / `password123`
+- **Features:** Browse recommendations, rate movies, search functionality
+- **Note:** This demo uses mock data for demonstration purposes
+
+### 🎯 What You Can Try:
+- ✅ Browse personalized movie recommendations
+- ✅ Rate movies with the 5-star system
+- ✅ Search for movies by title or genre
+- ✅ View similar movies for any selected title
+- ✅ Switch between different tabs (Recommendations, Profile, Similar Items, Admin)
+- ✅ Export recommendations as CSV
+- ✅ Admin panel with analytics and data upload
+
+---
