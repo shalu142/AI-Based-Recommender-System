@@ -16,6 +16,7 @@ export interface Movie {
   description: string;
   userRating?: number;
   similarityScore?: number;
+  trailerUrl?: string;
 }
 
 export interface Recommendation {

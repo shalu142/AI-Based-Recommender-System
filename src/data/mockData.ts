@@ -17,7 +17,8 @@ export const mockMovies: Movie[] = [
     rating: 8.7,
     posterUrl: 'https://images.pexels.com/photos/7991579/pexels-photo-7991579.jpeg?auto=compress&cs=tinysrgb&w=300&h=400&fit=crop',
     description: 'When a young boy disappears, his mother, a police chief and his friends must confront terrifying supernatural forces.',
-    userRating: 5
+    userRating: 5,
+    trailerUrl: 'https://www.youtube.com/embed/b9EkMc79ZSU'
   },
   {
     id: 2,
@@ -27,7 +28,8 @@ export const mockMovies: Movie[] = [
     rating: 9.5,
     posterUrl: 'https://images.pexels.com/photos/4668509/pexels-photo-4668509.jpeg?auto=compress&cs=tinysrgb&w=300&h=400&fit=crop',
     description: 'A high school chemistry teacher diagnosed with inoperable lung cancer turns to manufacturing meth.',
-    userRating: 4
+    userRating: 4,
+    trailerUrl: 'https://www.youtube.com/embed/HhesaQXLuRY'
   },
   {
     id: 3,
@@ -37,7 +39,8 @@ export const mockMovies: Movie[] = [
     rating: 8.8,
     posterUrl: 'https://images.pexels.com/photos/5662857/pexels-photo-5662857.jpeg?auto=compress&cs=tinysrgb&w=300&h=400&fit=crop',
     description: 'A family saga with a supernatural twist, set in a German town where the disappearance of two young children exposes double lives.',
-    userRating: 5
+    userRating: 5,
+    trailerUrl: 'https://www.youtube.com/embed/rrwycJ08PSA'
   },
   {
     id: 4,
@@ -47,7 +50,8 @@ export const mockMovies: Movie[] = [
     rating: 8.6,
     posterUrl: 'https://images.pexels.com/photos/7991668/pexels-photo-7991668.jpeg?auto=compress&cs=tinysrgb&w=300&h=400&fit=crop',
     description: 'Set in the late 1970s, two FBI agents are tasked with interviewing serial killers to solve open cases.',
-    similarityScore: 0.87
+    similarityScore: 0.87,
+    trailerUrl: 'https://www.youtube.com/embed/Su2u5OEKlS8'
   },
   {
     id: 5,
@@ -57,7 +61,8 @@ export const mockMovies: Movie[] = [
     rating: 8.2,
     posterUrl: 'https://images.pexels.com/photos/7991436/pexels-photo-7991436.jpeg?auto=compress&cs=tinysrgb&w=300&h=400&fit=crop',
     description: 'Geralt of Rivia, a solitary monster hunter, struggles to find his place in a world where people often prove more wicked than beasts.',
-    similarityScore: 0.82
+    similarityScore: 0.82,
+    trailerUrl: 'https://www.youtube.com/embed/ndl1W4ltcmg'
   },
   {
     id: 6,
@@ -67,7 +72,8 @@ export const mockMovies: Movie[] = [
     rating: 8.3,
     posterUrl: 'https://images.pexels.com/photos/6899260/pexels-photo-6899260.jpeg?auto=compress&cs=tinysrgb&w=300&h=400&fit=crop',
     description: 'An unusual group of robbers attempt to carry out the most perfect robbery in Spanish history.',
-    similarityScore: 0.79
+    similarityScore: 0.79,
+    trailerUrl: 'https://www.youtube.com/embed/hMANIarjT50'
   },
   {
     id: 7,
@@ -77,7 +83,8 @@ export const mockMovies: Movie[] = [
     rating: 8.8,
     posterUrl: 'https://images.pexels.com/photos/7991579/pexels-photo-7991579.jpeg?auto=compress&cs=tinysrgb&w=300&h=400&fit=crop',
     description: 'A chronicled look at the criminal exploits of Colombian drug lord Pablo Escobar.',
-    similarityScore: 0.85
+    similarityScore: 0.85,
+    trailerUrl: 'https://www.youtube.com/embed/U7elNhHwgBU'
   },
   {
     id: 8,
@@ -87,7 +94,8 @@ export const mockMovies: Movie[] = [
     rating: 8.6,
     posterUrl: 'https://images.pexels.com/photos/5662857/pexels-photo-5662857.jpeg?auto=compress&cs=tinysrgb&w=300&h=400&fit=crop',
     description: 'Set at the intersection of the near future and the reimagined past, explore a world in which every human appetite can be indulged.',
-    similarityScore: 0.81
+    similarityScore: 0.81,
+    trailerUrl: 'https://www.youtube.com/embed/eX3u0IlBBO4'
   }
 ];
 
