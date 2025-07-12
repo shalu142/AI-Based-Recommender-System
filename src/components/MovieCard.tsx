@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useEffect } from 'react';
 import { Star, Play, Plus, ThumbsUp, ThumbsDown, X } from 'lucide-react';
 import { Movie } from '../types';
 
@@ -25,6 +26,25 @@ export const MovieCard: React.FC<MovieCardProps> = ({ movie, onRate, showSimilar
   const handleCloseVideo = () => {
     setIsPlaying(false);
   };
+
+  // Handle ESC key to close video
+  useEffect(() => {
+    const handleEscKey = (event: KeyboardEvent) => {
+      if (event.key === 'Escape' && isPlaying) {
+        setIsPlaying(false);
+      }
+    };
+
+    if (isPlaying) {
+      document.addEventListener('keydown', handleEscKey);
+      document.body.style.overflow = 'hidden'; // Prevent background scrolling
+    }
+
+    return () => {
+      document.removeEventListener('keydown', handleEscKey);
+      document.body.style.overflow = 'unset';
+    };
+  }, [isPlaying]);
 
   // Sample trailer URLs - in a real app, these would come from your API
   const getTrailerUrl = (movieId: number) => {
@@ -115,16 +135,23 @@ export const MovieCard: React.FC<MovieCardProps> = ({ movie, onRate, showSimilar
 
       {/* Video Modal */}
       {isPlaying && (
-        <div className="fixed inset-0 bg-black bg-opacity-90 flex items-center justify-center z-50">
+        <div 
+          className="fixed inset-0 bg-black bg-opacity-90 flex items-center justify-center z-50 cursor-pointer"
+          onClick={handleCloseVideo}
+        >
           <div className="relative w-full max-w-4xl mx-4">
             <button
               onClick={handleCloseVideo}
-              className="absolute -top-12 right-0 text-white hover:text-gray-300 transition-colors"
+              className="absolute -top-12 right-0 text-white hover:text-gray-300 transition-colors bg-gray-800 rounded-full p-2 hover:bg-gray-700"
             >
               <X className="w-8 h-8" />
             </button>
             
-            <div className="relative w-full" style={{ paddingBottom: '56.25%' }}>
+            <div 
+              className="relative w-full cursor-default" 
+              style={{ paddingBottom: '56.25%' }}
+              onClick={(e) => e.stopPropagation()}
+            >
               <iframe
                 src={`${getTrailerUrl(movie.id)}?autoplay=1&rel=0&modestbranding=1`}
                 title={`${movie.title} Trailer`}
@@ -135,7 +162,11 @@ export const MovieCard: React.FC<MovieCardProps> = ({ movie, onRate, showSimilar
               />
             </div>
             
-            <div className="mt-4 text-white">
+            <div 
+              className="mt-4 text-white cursor-default"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <p className="text-sm text-gray-400 mb-2">Press ESC or click outside to close</p>
               <h2 className="text-2xl font-bold mb-2">{movie.title}</h2>
               <p className="text-gray-300 mb-2">{movie.year} • {movie.genre.join(', ')} • ⭐ {movie.rating}</p>
               <p className="text-gray-400">{movie.description}</p>
