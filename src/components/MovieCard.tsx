@@ -146,22 +146,3 @@ export const MovieCard: React.FC<MovieCardProps> = ({ movie, onRate, showSimilar
     </>
   );
 };
-          
-          <div className="flex items-center space-x-1">
-            {[1, 2, 3, 4, 5].map((star) => (
-              <button
-                key={star}
-                onClick={() => handleRating(star)}
-                className={`w-4 h-4 ${star <= userRating ? 'text-yellow-400 fill-current' : 'text-gray-600'} hover:text-yellow-400 transition-colors`}
-              >
-                <Star className="w-full h-full" />
-              </button>
-            ))}
-          </div>
-        </div>
-        
-        <p className="text-gray-400 text-xs line-clamp-3">{movie.description}</p>
-      </div>
-    </div>
-  );
-};
